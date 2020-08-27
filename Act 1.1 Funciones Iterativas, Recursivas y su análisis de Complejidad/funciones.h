@@ -29,13 +29,8 @@ long int Funciones::sumaRecursiva(long int n)
 
 long int Funciones::sumaDirecta(long int n)
 {
-  long int suma =  0;
-  long int i = 1;
-  while(i<=n)
-  {
-    suma= suma+i;
-    i++;
-  }
+  long int suma;
+  suma = ( n * (n + 1) )/2;
   return suma;
 }
 
