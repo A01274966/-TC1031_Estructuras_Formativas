@@ -17,4 +17,4 @@ Suma Directa
 
 **Análisis de complejidad temporal**
 
-El algotritmo recorre una cantidad n de pasos que va de i = 1 hasta n, por lo que su complejidad es de O(n) para el peor de los casos.
+El algotritmo utiliza una funcion matematica que realiza una sumatoria de 1 hasta n por medio de la multipicacion de un numero n por n+1 y dividido sobre 2, por lo que su complejidad es de O(1) para el peor de los casos.
