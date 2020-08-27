@@ -1,24 +1,25 @@
-#include <iostream>
-using namespace std;
+#ifndef FUNCIONES_H
+#define FUNCIONES_H
 
 class Funciones
 {
   public:
-    int sumaIterativa(int n);
-    int sumaRecursiva(int n);
-    int sumaDirecta(int n);
+    Funciones(){};
+    long int sumaIterativa(long int n);
+    long int sumaRecursiva(long int n);
+    long int sumaDirecta(long int n);
 };
 
-int Funciones::sumaIterativa(int n)
+long int Funciones::sumaIterativa(long int n)
 {
-  int suma = 0;
-  for(int i=1; i<=n; i++)
+  long int suma = 0;
+  for(long int i=1; i<=n; i++)
   {
     suma = suma+i; 
   }
   return suma;
 }
-int Funciones::sumaRecursiva(int n)
+long int Funciones::sumaRecursiva(long int n)
 {
   if(n==0)
     return 0;
@@ -26,10 +27,10 @@ int Funciones::sumaRecursiva(int n)
     return n + sumaRecursiva(n-1);
 }
 
-int Funciones::sumaDirecta(int n)
+long int Funciones::sumaDirecta(long int n)
 {
-  int suma =  0;
-  int i = 1;
+  long int suma =  0;
+  long int i = 1;
   while(i<=n)
   {
     suma= suma+i;
@@ -37,3 +38,5 @@ int Funciones::sumaDirecta(int n)
   }
   return suma;
 }
+
+#endif
