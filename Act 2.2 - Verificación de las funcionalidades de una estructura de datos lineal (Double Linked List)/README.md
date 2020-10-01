@@ -3,7 +3,7 @@ add
 
 **Análisis de complejidad temporal**
 
-El algoritmo seía O(n) en el peor de los casos. El algoritmo recorrera una lista hasta llegar al ultimo elemnto por medio de un ciclo while y añadira un indice mas.Por lo mismo seria O(n) ya que se recorre n elementos de la lista en el peor de los casos
+El algoritmo seía O(n) en el peor de los casos. El algoritmo recorrera una lista hasta llegar al ultimo elemnto por medio de un ciclo while y añadira un indice mas y ligarlo con una doble lista .Por lo mismo seria O(n) ya que se recorre n elementos de la lista en el peor de los casos
 
 ----------------------------------------------
 find
