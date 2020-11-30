@@ -20,13 +20,13 @@ public:
 	Node(T, Node<T>*, Node<T>*);
 	void add(T);
 	bool find(T);
-	int whatlevelamI(T);
 	void inorder(stringstream&) const;
 	void preorder(stringstream&) const;
 	void postorder(stringstream&) const;
 	void levelorder(stringstream&) const;
 	void printlevel(stringstream&, int) const;
-  bool ancestors(T, stringstream&) const;
+  	int whatlevelamI(T);
+  	bool ancestors(T, stringstream&) const;
 	int height() const;
 
 	friend class BST<T>;
@@ -67,19 +67,7 @@ bool Node<T>::find(T val) {
 	}
 }
 
-template <class T>
-int Node<T>::whatlevelamI(T val) {
-	if (val == value) {
-		return 1;
-	} else if (val < value) {
-		if(left != 0)
-			return left->whatlevelamI(val) + 1;
-	} else if (val > value) {
-		if (right != 0)
-		return right->whatlevelamI(val) + 1;
-	}
-	return -9999;
-}
+
 
 template <class T>
 void Node<T>::inorder(stringstream &aux) const {
@@ -142,6 +130,20 @@ void Node<T>::printlevel(stringstream &aux, int level) const {
 }
 
 template <class T>
+int Node<T>::whatlevelamI(T val) {
+	if (val == value) {
+		return 1;
+	} else if (val < value) {
+		if(left != 0)
+			return left->whatlevelamI(val) + 1;
+	} else if (val > value) {
+		if (right != 0)
+		return right->whatlevelamI(val) + 1;
+	}
+	return -9999;
+}
+
+template <class T>
 bool Node<T>::ancestors(T val, stringstream &aux) const{
 
 	if (val == value) {
@@ -197,12 +199,12 @@ public:
 	bool empty() const;
 	void add(T);
 	bool find(T) const;
-	int  whatlevelamI(T) const;
 	string inorder() const;
 	string preorder() const;
 	string postorder() const;
 	string levelorder() const;
 	string visit();
+  	int  whatlevelamI(T) const;
 	string ancestors(T) const;
 	int height() const;
 };
@@ -233,18 +235,6 @@ bool BST<T>::find(T val) const {
 	}
 	else {
 		return false;
-	}
-}
-
-template <class T>
-int BST<T>::whatlevelamI(T val) const {
-	if (root != 0) {
-	 	int num = root->whatlevelamI(val);
-		if(num < 0) return -1;
-		return num;
-	}
-	else {
-		return -1;
 	}
 }
 
@@ -301,6 +291,17 @@ int BST<T>::height() const {
 	return root->height();
 }
 
+template <class T>
+int BST<T>::whatlevelamI(T val) const {
+	if (root != 0) {
+	 	int num = root->whatlevelamI(val);
+		if(num < 0) return -1;
+		return num;
+	}
+	else {
+		return -1;
+	}
+}
 
 template <class T>
 string BST<T>::ancestors(T val) const {
