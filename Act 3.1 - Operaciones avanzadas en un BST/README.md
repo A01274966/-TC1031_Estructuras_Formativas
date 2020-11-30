@@ -24,7 +24,7 @@ whatlevelamI
 
 **Análisis de complejidad temporal**
 
-De la misma manera que la funciona anterior, el algorito recorre las ramas o los niveles necesarios para poder encontrar el valor deseado y regresar el nivel en el que se encuentra, en el caso de que este no se encuentre se regresara -1. Por lo tanto la complejidad temporal seira de O(b) en el peor de los casos.
+De la misma manera que la funciona anterior, el algorito recorre las ramas o los niveles necesarios para poder encontrar el valor deseado y regresar el nivel en el que se encuentra, en el caso de que este no se encuentre se regresara -1. Por lo tanto la complejidad temporal seria de O(n) en el peor de los casos.
 
 ----------------------------------------------
 
